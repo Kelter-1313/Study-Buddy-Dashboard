@@ -14,11 +14,11 @@ def email_sender() -> None:
     """Sends a zoom link."""
     import yagmail
     receiver = "kelter1313@gmail.com", "demarcoal72@gmail.com"
-    body = "This is the body"
+    body = "" # Zoom link will go here, inputted by the user
     yag = yagmail.SMTP("studyquarantips@gmail.com", "#hackDuke2020CEN")
     yag.send(
         to=receiver,
-        subject="This is Christian!",
+        subject="Zoom link for study group!",
         contents=body, 
     )
 
@@ -30,3 +30,17 @@ def pomodoro_timer() -> None:
     toast.show_toast("Pomodoro Method!", "Starting a 25 minute pomodoro timer! You'll be sent another notification when the timer is up!", duration=20,icon_path="icon.ico")
     sleep(1500.0)
     toast.show_toast("Pomodoro Method!", "Your 25 minutes are up! Record what you got done and take a five minute break!", duration=20, icon_path="icon.ico")
+
+def email_sender_with_input() -> None:
+    """Sends a zoom link."""
+    import yagmail
+    receiver = input()
+    reciever_list = receiver.split(", ")
+    body = input() # Zoom link will go here, inputted by the user
+    for email in reciever_list:
+        yag = yagmail.SMTP("studyquarantips@gmail.com", "#hackDuke2020CEN")
+        yag.send(
+            to=email,
+            subject="Zoom link for study group!",
+            contents=body, 
+        )

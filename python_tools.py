@@ -22,4 +22,11 @@ def email_sender() -> None:
         contents=body, 
     )
 
-
+def pomodoro_timer() -> None:
+    """Initiates a pomodoro method timer."""
+    from win10toast import ToastNotifier
+    from time import sleep
+    toast = ToastNotifier()
+    toast.show_toast("Pomodoro Method!", "Starting a 25 minute pomodoro timer! You'll be sent another notification when the timer is up!", duration=20,icon_path="icon.ico")
+    sleep(1500.0)
+    toast.show_toast("Pomodoro Method!", "Your 25 minutes are up! Record what you got done and take a five minute break!", duration=20, icon_path="icon.ico")

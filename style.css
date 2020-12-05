@@ -1,7 +1,23 @@
-button{
-    background-color: blue;
-    border-radius: 15px;
-    color: white;  
+.block{
     float: left;
-    width: 33.3%; 
+    width: 33.3%;
+    border: 1px solid;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.block button{
+    background-color: blue;
+    color: white;
+    border-radius: 15px;
+    padding: 20px 80px 20px 80px;
+    border: none;
+}
+
+.block input{
+    float: left;
+}
+
+.block label{
+    float: left;
 }

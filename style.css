@@ -1,4 +1,7 @@
-#button{
+button{
     background-color: blue;
-    
+    border-radius: 15px;
+    color: white;  
+    float: left;
+    width: 33.3%; 
 }

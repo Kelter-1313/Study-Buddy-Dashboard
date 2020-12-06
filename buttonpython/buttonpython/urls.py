@@ -22,4 +22,7 @@ urlpatterns = [
     url(r'^output', views.output, name="script"),
     url(r'^external', views.external),
     url(r'^tips', views.tips),
+    url(r'^translator', views.translator),
+    url(r'^wikispeed', views.wikispeed),
 ]
+

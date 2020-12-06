@@ -104,9 +104,17 @@ button{
     background-color:#5da423;;
 }
 
+.pomoBox #startButton:hover{
+    background-color:#4c861c;
+}
+
 .pomoBox #resetButton{
     float: right;
     background-color: red;
+}
+
+.pomoBox #resetButton:hover{
+    background-color: rgb(216, 0, 0);
 }
 
 .pomoBox h2{
@@ -116,4 +124,11 @@ button{
 .studyBox{
     margin-top: 15px;
     margin-left: 5px;
+}
+
+#UNC_img{
+    position: absolute;
+    margin-top: 380px;
+    margin-left: -180px;
+    transform: rotate(90deg);
 }

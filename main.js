@@ -12,6 +12,14 @@ const langBox = document.querySelector(".langBox");
 const wikiBox = document.querySelector(".wikiBox");
 
 
+// const wikiSearchButton = document.querySelector("#wikiSearchButton");
+// const wikiTextBox = document.querySelector("#wikiTextBox");
+
+// wikiSearchButton.addEventListener("click", (e) => {
+//     window.open(`http://www.google.com/search?q=${wikiTextBox.value} wikipedia`)
+// });
+
+
 
 function setDisplayNone(targetBox){
     const boxes = [ZoomBox, pomoBox, studyBox, langBox, wikiBox];
@@ -112,15 +120,15 @@ function countdown(){
             if(i == 7){
                 clearInterval(myVar);
             } else if(i == 6){
-                min = 30; //30
+                mins = 30; //30
                 clearInterval(myVar);
                 countdown();
             } else if(i % 2 != 0){
-                min = 5; //5
+                mins = 5; //5
                 clearInterval(myVar);
                 countdown();
             } else {
-                min = 25; //25
+                mins = 25; //25
                 clearInterval(myVar);
                 countdown();
             }

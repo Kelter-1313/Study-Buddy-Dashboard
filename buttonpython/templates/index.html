@@ -50,28 +50,6 @@
 </head>
 
 <body>
-    
-    <!-- <div class="buttons">
-        <button class="button" id="zButton">Zoom Link Sharing</button> -->
-        
-        <!-- <form action="/external/" method="post">
-            {% csrf_token %}
-            Enter Zoom Link:
-            <input type="text" name="param" required><br><br>
-            {{data_external}}<br><br>
-            {{data1}}
-
-            Enter Emails:
-            <input type="text" name="param2" required><br><br>
-            {{data_external}}<br><br>
-            {{data1}}
-            <br><br>
-            <input type="submit" value="Send Zoom Link!!!">
-
-        </form> -->
-        <!-- <button class="button" id="pomoButton">Pomodoro Timer</button>
-        <button class="button" id="studyButton">Study Tips</button>
-    </div> -->
 
     <div class="buttons">
         <button class="button" id="zButton">Zoom Link Sharing</button>
@@ -85,25 +63,12 @@
         <p id="textBox">
             Zoom Link Sharing is a tool that allows users to send a Zoom link to their study partners' emails all from one place. <br><br>
             The Pomodoro Timer provides users with a time management tool that encourages them to work through large projects in an efficient method. The Pomodoro Method consists of 4 25-minute work intervals seperated by five minute breaks. <br><br>
-            The Study Tips tool provides users with randomized tips that may help them with everyday school activities. <br><br>
+            The Study Tips tool provides users with randomized tips that may help them with everyday school activities. NOTE : Only works on windows computers at the moment. <br><br>
             Quick Translate is a tool that allows users to input foreign text (in Chinese, Spanish, Portuguese, and English), the language that text is in, and the language they want to translate that text to, all while never having to leave the page. <br><br>
-            WikiSpeedia provides users with the ability to input a topic they would like to learn more about, and displays a short summary of that topic from Wikipeedia.
+            WikiSpeedia provides users with the ability to input a topic they would like to learn more about, and displays a short summary of that topic from Wikipedia.
         </p> <!-- Feel free to put anything in here, first thing a user sees when visiting the page -->
         <!-- style:"" removed... -->
         <div class="ZoomBox" style="display:none">
-            <!-- <label for="">Please Input Your Zoom Link</label>
-            <br>
-            <input type="text">
-
-            <br>
-
-            <label for="">Please input participants' emails seperated by commas</label>
-            <br>
-            <input type="text">
-
-            <br>
-
-            <button class="zButton">Send Zoom Link</button> -->
             <form action="/external/" method="post">
                 {% csrf_token %}
                 Enter Zoom Link:
@@ -149,44 +114,49 @@
 
         <div class="langBox" style="display:none">
 
-            <textarea id="translatedBox" cols="30" rows="10"></textarea>
+            <form action="/translator/" method="post">
+                {% csrf_token %}
+                Enter Text to be Translated:
+                <input type="text" name="param3" required><br>
+    
+                Enter Current Language:
+                <input type="text" name="param4" required><br>
 
-            <br>
+                Enter Target Language:
+                <input type="text" name="param5" required><br><br>
 
-            <label for="">Please Input Text to be Translated</label>
-            <br>
-            <input type="text">
-
-            <br>
-
-            <label for="">Please Input Current Language</label>
-            <br>
-            <input type="text">
-
-            <br>
-
-            <label for="">Please Input Target Language</label>
-            <br>
-            <input type="text">
-
-            <br>
-
-            <button class="zButton">Translate</button>
-
-            <br>
-
+                {{data_translator}}
+                {{data3}}
+                <input type="submit" value="Translate!!!">
+    
+            </form>
             
         </div>
 
         <div class="wikiBox" style="display:none">
-            <textarea id="translatedBox" cols="30" rows="10"></textarea>
+            <form action="/wikispeed/" method="post">
+                {% csrf_token %}
+                Enter Topic to Search:
+                <input type="text" name="param6" required><br>
 
-            <br>
+                {{data_wikispeed}}
+                {{data4}}
+                <input type="submit" value="Send Query!!!">
+    
+            </form>
+        </div>
+
+        <!-- <div class="wikiBox" style="display:none">
 
             <label for="">Topic to Search</label>
             <br>
-            <input type="text">
-        </div>
+            <input type="text" id="wikiTextBox">
+
+            <button id="wikiSearchButton">Search</button>
+        </div> -->
+
+
+
 
     </div>
 
@@ -196,6 +166,10 @@
             <p>Erin Byrd <br> Nicholas Carter <br> Albert DeMarco</p>
         </p>
     </div>
+
+    <!-- <div id="UNC_img">
+        <img src="CS_UNC_blue.png" alt="">
+    </div> -->
 
 
 

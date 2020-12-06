@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(235, 240, 241);
+    background-color: rgb(255, 255, 255);
 }
 
 input{
@@ -129,6 +129,6 @@ button{
 #UNC_img{
     position: absolute;
     margin-top: 380px;
-    margin-left: -180px;
     transform: rotate(90deg);
+    margin-left: 400px;
 }

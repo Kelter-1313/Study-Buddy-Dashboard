@@ -1,40 +1,3 @@
-<!-- This is the html for the webpage
-
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title>StudyBuddy</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-
-<body>
-    
-    <div class="buttons">
-        <button>Zoom Link Sharing</button>
-        <button>Pomodoro Timer</button>
-        <button>Study Tips</button>
-    </div>
-
-
-    <div class="container">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum fugit sint earum ad enim? Nulla facere optio repellendus ratione quam adipisci. Pariatur mollitia dolorum minima itaque ducimus, aliquam fugiat veritatis atque, recusandae dignissimos quos nostrum quae nobis illum molestias consequuntur modi facere commodi non cupiditate qui odit perferendis numquam illo? Esse eius quibusdam, distinctio ad sunt similique numquam rem quia voluptas deserunt velit cupiditate placeat, necessitatibus vitae dolores, eum reiciendis aut adipisci. Dolor delectus quidem</p>
-
-    </div>
-
-    <div class="sidebar">
-        <p>
-            <h3>Contributors:</h3>
-            <p></p>
-        </p>
-    </div>
-
-    
-</body>
-
-</html> -->
-
-
 <!--This is the html for the webpage-->
 
 <!DOCTYPE html>
@@ -49,30 +12,14 @@
     
     <div class="buttons">
         <button class="button" id="zButton">Zoom Link Sharing</button>
-        
-        <form action="/external/" method="post">
-            {% csrf_token %}
-            Enter Zoom Link:
-            <input type="text" name="param" required><br><br>
-            {{data_external}}<br><br>
-            {{data1}}
-
-            Enter Emails:
-            <input type="text" name="param2" required><br><br>
-            <!-- {{data_external}}<br><br>
-            {{data1}} -->
-            <br><br>
-            <input type="submit" value="Send Zoom Link!!!">
-
-        </form>
         <button class="button" id="pomoButton">Pomodoro Timer</button>
         <button class="button" id="studyButton">Study Tips</button>
     </div>
 
 
     <div class="container">
-        <p id="textBox">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum fugit sint earum ad enim? Nulla facere optio repellendus ratione quam adipisci. Pariatur mollitia dolorum minima itaque ducimus, aliquam fugiat veritatis atque, recusandae dignissimos quos nostrum quae nobis illum molestias consequuntur modi facere commodi non cupiditate qui odit perferendis numquam illo? Esse eius quibusdam, distinctio ad sunt similique numquam rem quia voluptas deserunt velit cupiditate placeat, necessitatibus vitae dolores, eum reiciendis aut adipisci. Dolor delectus quidem facere illo iusto totam quo, ab, placeat numquam incidunt libero iure nemo commodi a est perferendis id nam optio. Error enim provident quidem vero consequatur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam hic debitis, excepturi repellat sunt quibusdam nobis dignissimos repellendus repudiandae nostrum laboriosam? Sunt reiciendis maiores accusamus reprehenderit iure ipsam, nemo, eius sit odio maxime consequatur provident, aperiam earum id? Asperiores, voluptatibus. Ad, dolores voluptate adipisci animi labore laboriosam excepturi iure molestiae aliquam odio. Nesciunt deleniti provident blanditiis quibusdam aliquam reprehenderit similique, impedit repellat eaque harum, dicta sint? Impedit quibusdam voluptas eaque unde vel architecto omnis ipsa illo! Neque quisquam praesentium optio accusamus labore dolore odio recusandae non consequatur perspiciatis beatae sunt hic, eos saepe ipsa voluptatem amet asperiores maiores ipsam? Incidunt adipisci hic, fuga nisi necessitatibus nesciunt quae deserunt pariatur aspernatur, mollitia, nihil molestiae. Excepturi, qui. Labore corrupti itaque veniam quisquam quo beatae quos quidem quae voluptatem ut, provident rerum rem sed cupiditate voluptatibus, quia minus vitae aliquid officia. Sapiente dolorum nobis quis magni, reiciendis, pariatur doloribus ad sunt doloremque amet voluptates asperiores quam. Hic nostrum molestiae, officia eaque reiciendis blanditiis est laudantium nemo eligendi facere iusto accusantium deserunt ex aliquid consectetur saepe dicta tempore recusandae suscipit pariatur amet. Est accusamus, id</p> <!-- Feel free to put anything in here, first thing a user sees when visiting the page -->
-        <!-- style:"" removed... -->
+        <p id="textBox" style="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum fugit sint earum ad enim? Nulla facere optio repellendus ratione quam adipisci. Pariatur mollitia dolorum minima itaque ducimus, aliquam fugiat veritatis atque, recusandae dignissimos quos nostrum quae nobis illum molestias consequuntur modi facere commodi non cupiditate qui odit perferendis numquam illo? Esse eius quibusdam, distinctio ad sunt similique numquam rem quia voluptas deserunt velit cupiditate placeat, necessitatibus vitae dolores, eum reiciendis aut adipisci. Dolor delectus quidem facere illo iusto totam quo, ab, placeat numquam incidunt libero iure nemo commodi a est perferendis id nam optio. Error enim provident quidem vero consequatur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam hic debitis, excepturi repellat sunt quibusdam nobis dignissimos repellendus repudiandae nostrum laboriosam? Sunt reiciendis maiores accusamus reprehenderit iure ipsam, nemo, eius sit odio maxime consequatur provident, aperiam earum id? Asperiores, voluptatibus. Ad, dolores voluptate adipisci animi labore laboriosam excepturi iure molestiae aliquam odio. Nesciunt deleniti provident blanditiis quibusdam aliquam reprehenderit similique, impedit repellat eaque harum, dicta sint? Impedit quibusdam voluptas eaque unde vel architecto omnis ipsa illo! Neque quisquam praesentium optio accusamus labore dolore odio recusandae non consequatur perspiciatis beatae sunt hic, eos saepe ipsa voluptatem amet asperiores maiores ipsam? Incidunt adipisci hic, fuga nisi necessitatibus nesciunt quae deserunt pariatur aspernatur, mollitia, nihil molestiae. Excepturi, qui. Labore corrupti itaque veniam quisquam quo beatae quos quidem quae voluptatem ut, provident rerum rem sed cupiditate voluptatibus, quia minus vitae aliquid officia. Sapiente dolorum nobis quis magni, reiciendis, pariatur doloribus ad sunt doloremque amet voluptates asperiores quam. Hic nostrum molestiae, officia eaque reiciendis blanditiis est laudantium nemo eligendi facere iusto accusantium deserunt ex aliquid consectetur saepe dicta tempore recusandae suscipit pariatur amet. Est accusamus, id natus consequatur tempore obcaecati non quis necessitatibus maiores quisquam esse vitae, quos consectetur vero modi voluptatum? Nobis harum est asperiores quibusdam eaque corrupti inventore fugit omnis. Eos eius veritatis odit incidunt nihil reiciendis esse eligendi est, tempora odio voluptatibus distinctio voluptates nisi adipisci voluptatum ullam, rem provident sit inventore totam quo. Dolorum, nulla ipsum fugiat quo iure tenetur id cum ex provident deserunt! Libero omnis facere nam minima, voluptatum, perferendis quo maxime autem delectus, quisquam officiis! Deserunt explicabo ducimus libero quis! Voluptas tempora, dicta esse perferendis quod molestiae reprehenderit aut quas a cupiditate nulla ex, ducimus nemo quidem. Animi commodi optio nostrum sequi, rerum in harum minus dignissimos minima eos facilis dolores eaque alias laborum consequuntur voluptas, sapiente officia unde aut facere amet necessitatibus quos. Saepe qui, fugit illum exercitationem omnis totam velit consequatur accusamus rem esse non iste sit ut provident quod nulla possimus necessitatibus corrupti recusandae maxime architecto amet. Excepturi, impedit. Molestias blanditiis quod suscipit rerum, esse facere ipsa reprehenderit fugiat ducimus, asperiores omnis eligendi temporibus? Fugiat quasi optio iure laboriosam recusandae, distinctio voluptate vel, rerum placeat necessitatibus similique tenetur repellat, libero fugit sed ex itaque ducimus magnam perferendis aut eveniet voluptatibus. Natus, deleniti dolorum. Quos aspernatur iure fugit rem quae, tempora natus reiciendis debitis esse, eius expedita cupiditate laborum eum quis consequatur ducimus eveniet molestias quibusdam magnam unde. Harum, in recusandae natus deleniti ut incidunt debitis blandit</p>
+
         <div class="ZoomBox" style="display:none">
             <label for="">Please Input Your Zoom Link</label>
             <br>
@@ -90,7 +37,10 @@
         </div>
 
         <div class="pomoBox" style="display:none">
-            Text
+            <h2 id="timeBox">25:00</h2>
+            <h3 id="cycleBox">0 of 4 25-minute segments complete</h3>
+            <button id="startButton">Start</button>
+            <button id="resetButton">Reset</button>
         </div>
 
         <div class="studyBox" style="display:none">
@@ -101,8 +51,8 @@
 
     <div class="sidebar">
         <p>
-            <h3>Contributors:</h3>
-            <p>Erin Byrd <br> Nicholas Carter <br> Albert DeMarco</p>
+            <h4>Contributors:</h4>
+            <p>Erin Byrd <br> Nicholas Carter <br> Albert Demarco</p>
         </p>
     </div>
 

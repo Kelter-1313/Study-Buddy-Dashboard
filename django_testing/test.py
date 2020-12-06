@@ -12,7 +12,8 @@ def email_sender() -> None:
     # print(output)
     import yagmail
     receiver = "kelter1313@gmail.com" # removed demarcoal72@gmail.com
-    body = " %s " % (sys.argv[1]) # Zoom link will go here, inputted by the user
+    body = " %s " % ("cat") # Zoom link will go here, inputted by the user
+    #exchanged sys.argv[1] with "cat"
     yag = yagmail.SMTP("studyquarantips@gmail.com", "#hackDuke2020CEN")
     yag.send(
        to=receiver,

@@ -12,7 +12,7 @@
     
     <div class="buttons">
         <button>Zoom Link Sharing</button>
-        <button>Pomodoro Timer</button>
+        <button>PomodoroTimer</button>
         <button>Study Tips</button>
     </div>
 
@@ -94,7 +94,10 @@
         </div>
 
         <div class="pomoBox" style="display:none">
-            Text
+            <h2 id="timeBox">25:00</h2>
+            <h3 id="cycleBox">0 of 4 25-minute segments complete</h3>
+            <button id="startButton">Start</button>
+            <button id="resetButton">Reset</button>
         </div>
 
         <div class="studyBox" style="display:none">
@@ -112,7 +115,11 @@
 
 
 
-    <script src="{{ STATIC_URL }}js/main.js"></script>
+    <script src= "{% static 'js/main.js' %}"></script>
+<!--Replaced {{STATIC_URL}}js/main.js-->
+
+    <!--{% load static %}
+<img src="{% static 'my_app/example.jpg' %}" alt="My image">-->
     <!--Old src: "{{ STATIC_URL }}js/main.js"-->
 </body>
 

@@ -36,13 +36,17 @@
 
 
 <!--This is the html for the webpage-->
+{% load static %}
+
 
 <!DOCTYPE html>
 <html>
 
 <head>
     <title>StudyBuddy</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <!-- Old href : {% static 'css/style.css' %}--> 
+    <!-- C:\Users\kelter\Documents\GitHub\Study-Buddy-Dashboard\buttonpython\buttonpython\static\css\style.css -->
 </head>
 
 <body>
@@ -72,7 +76,7 @@
 
     <div class="container">
         <p id="textBox">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum fugit sint earum ad enim? Nulla facere optio repellendus ratione quam adipisci. Pariatur mollitia dolorum minima itaque ducimus, aliquam fugiat veritatis atque, recusandae dignissimos quos nostrum quae nobis illum molestias consequuntur modi facere commodi non cupiditate qui odit perferendis numquam illo? Esse eius quibusdam, distinctio ad sunt similique numquam rem quia voluptas deserunt velit cupiditate placeat, necessitatibus vitae dolores, eum reiciendis aut adipisci. Dolor delectus quidem facere illo iusto totam quo, ab, placeat numquam incidunt libero iure nemo commodi a est perferendis id nam optio. Error enim provident quidem vero consequatur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam hic debitis, excepturi repellat sunt quibusdam nobis dignissimos repellendus repudiandae nostrum laboriosam? Sunt reiciendis maiores accusamus reprehenderit iure ipsam, nemo, eius sit odio maxime consequatur provident, aperiam earum id? Asperiores, voluptatibus. Ad, dolores voluptate adipisci animi labore laboriosam excepturi iure molestiae aliquam odio. Nesciunt deleniti provident blanditiis quibusdam aliquam reprehenderit similique, impedit repellat eaque harum, dicta sint? Impedit quibusdam voluptas eaque unde vel architecto omnis ipsa illo! Neque quisquam praesentium optio accusamus labore dolore odio recusandae non consequatur perspiciatis beatae sunt hic, eos saepe ipsa voluptatem amet asperiores maiores ipsam? Incidunt adipisci hic, fuga nisi necessitatibus nesciunt quae deserunt pariatur aspernatur, mollitia, nihil molestiae. Excepturi, qui. Labore corrupti itaque veniam quisquam quo beatae quos quidem quae voluptatem ut, provident rerum rem sed cupiditate voluptatibus, quia minus vitae aliquid officia. Sapiente dolorum nobis quis magni, reiciendis, pariatur doloribus ad sunt doloremque amet voluptates asperiores quam. Hic nostrum molestiae, officia eaque reiciendis blanditiis est laudantium nemo eligendi facere iusto accusantium deserunt ex aliquid consectetur saepe dicta tempore recusandae suscipit pariatur amet. Est accusamus, id</p> <!-- Feel free to put anything in here, first thing a user sees when visiting the page -->
-<!-- style:"" removed... -->
+        <!-- style:"" removed... -->
         <div class="ZoomBox" style="display:none">
             <label for="">Please Input Your Zoom Link</label>
             <br>
@@ -108,7 +112,8 @@
 
 
 
-    <script src="main.js"></script>
+    <script src="{{ STATIC_URL }}js/main.js"></script>
+    <!--Old src: "{{ STATIC_URL }}js/main.js"-->
 </body>
 
 </html>

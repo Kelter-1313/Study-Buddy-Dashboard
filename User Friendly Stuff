@@ -2,6 +2,6 @@ git remote add Study_Buddy_Dashboard https://github.com/Kelter-1313/Study-Buddy-
 
 git push
 
-127.0.0.1:8002
+127.0.0.1:8003
 
 This is all you need!

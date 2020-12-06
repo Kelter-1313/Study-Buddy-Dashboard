@@ -5,32 +5,10 @@ def tip_notifier() -> None:
     from win10toast import ToastNotifier
     from typing import List
     from random import randint
-    tips_list: List[str] = ["Use your school calendar for more than hw!!! It will force you to look at what you need to do whenever you look at social plans!", "Study right before you sleep! It is scientifically proven that studying right before you sleep helps your brain process the information!", "Cats are rad!", "If you’ve got a big assignment looming, like a research paper, stay motivated by completing a piece of the project every few days. Write one paragraph each night. Or, do 5 algebra problems from your problem set at a time, and then take a break.", "Come up with a system and keep to it. Do you keep one big binder for all your classes with color-coded tabs? Or do you prefer to keep separate notebooks and a folder for handouts? Keep the system simple—if it’s too fancy or complicated, you are less likely to keep it up everyday.", "When will you make the time to do your homework every day? Find the time of day that works best for you (this can change day-to-day, depending on your schedule!), and make a plan to hit the books.", "A study on workplace distractions found that it takes workers an average of 25 minutes to return to what they were working on pre-interruption. Try turning off your phone notifications or blocking Twitter (temporarily) on your computer so you can concentrate on the homework tasks at hand.", "When you’re looking at the homework you have to get done tonight, be realistic about how long things actually take. Gauging that reading a history chapter will take an hour and writing a response will take another 30 minutes will help you plan how you spend your time.", "Is your teacher finished lecturing, but you still have 10 minutes of class left? Get a jump on your chemistry homework while it’s still fresh in your mind. Or use the time to ask your teacher about concepts that were fuzzy the first time.", "Study a little every day. Cramming Spanish vocabulary for a quiz might work in the short-term, but when comes time to study for midterms, you’ll be back at square 1. You might remember the vocab list long enough to ace the quiz, but reviewing the terms later will help you store them for the long haul.", "A rough start to the semester doesn’t have to sink your GPA. Take proactive steps by checking your grades regularly online and getting a tutor if you need one.", "Make a friend in every class. It gives you a study buddy and someone to hang with after!"]
+    tips_list: List[str] = ["Use your school calendar for more than hw!!! It will force you to look at what you need to do whenever you look at social plans!", "Study right before you sleep! It is scientifically proven that studying right before you sleep helps your brain process the information!", "If you’ve got a big assignment, like a final paper, complete a bit of the project every few days. Write a paragraph or two each night.", "Come up with a system! Do you keep one big binder for all your classes with sorted pages? Or do you prefer separate notebooks and a folder for handouts? Keep it simple! This will help you continue to use the system over time.", "When will you do your hw? Find the best time for YOU.", "It takes workers an average of 25 minutes to get back to the task at hand after an interruption. Turn off your phone and silence social media so you can concentrate on the homework tasks at hand.", "Be honest with yourself about how long things actually take. Estimating that reading a history chapter will take an hour and a response will take thirty more minutes will help you plan how you spend your time.", "Spare time after class? Use the time to ask your teacher about tricky concepts and to do a little homework.", "Study a little every day. You might remember the vocab list long enough to ace the quiz when you cram, but you can't possibly cover the whole semester at once.", "A rough start to the semester can be coped with. Check your grades regularly online and get a tutor if you need one.", "Make a friend in every class. It gives you a study buddy and someone to hang with after!", "Spaced repitition involves breaking up information into small chunks and reviewing them over a long period of time. Learn a few bits of knowledge each day and review each lesson before starting anything new.", "Turn the details you need to remember into an easy-to-recite acronym! PEMDAS is an excellent example!", "Write your notes! Research suggests we store information better if we write it by hand than when we type it. Consider recopying the most important notes from the semester onto a new sheet of paper as method of studying!", "Quizzing yourself is a great way to prepare for evaluations! Use a stopwatch to simulate the test time limit.", "Reward yourself after a tough study session! Knowing there’s something to look forward to makes it easier to keep going!", "Get some caffeine! Whether it's coffee, soda, or tea, research suggests the amount of caffeine in a cup or two of coffee boosts attention and alertness.", "When there’s a textbook full of equations to memorize, it can be tempting to stay up all night. Resist this. Though it sounds smart, it actually can lead to a greater sensitivity to stress and a higher rate of forgetfulness.", "Some people are early birds, some are night owls. Some people need a study buddy, while others prefer to study alone. Experiment to find what study method is most effective for you", "Drink lots of water! Hydration improves memory and focus!"]
     tip: str = tips_list[randint(0, (len(tips_list) - 1))]
     toast = ToastNotifier()
     toast.show_toast("Study tip!", tip, duration=20,icon_path="icon.ico")
-
-# def email_sender() -> None:
-#    """Sends a zoom link."""
-#    import yagmail
-#    receiver = "kelter1313@gmail.com", "demarcoal72@gmail.com"
-#     body = "" # Zoom link will go here, inputted by the user
-#     yag = yagmail.SMTP("studyquarantips@gmail.com", "#hackDuke2020CEN")
-#     yag.send(
-#        to=receiver,
-#        subject="Zoom link for study group!",
-#        contents=body, 
-#     )
-
-def pomodoro_timer() -> None:
-    """Initiates a pomodoro method timer."""
-    from win10toast import ToastNotifier
-    from time import sleep
-    toast = ToastNotifier()
-    toast.show_toast("Pomodoro Method!", "Starting a 25 minute pomodoro timer! You'll be sent another notification when the timer is up!", duration=20,icon_path="icon.ico")
-    sleep(1500.0)
-    toast.show_toast("Pomodoro Method!", "Your 25 minutes are up! Record what you got done and take a five minute break!", duration=20, icon_path="icon.ico")
-
 
 
 def email_sender_with_input() -> None:

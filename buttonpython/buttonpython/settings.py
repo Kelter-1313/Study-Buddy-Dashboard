@@ -27,6 +27,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+STATICFILES_DIRS = [
+    "/Users/kelter/Documents/GitHub/Study-Buddy-Dashboard/buttonpython/buttonpython/static"
+]
+
 
 # Application definition
 

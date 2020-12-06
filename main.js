@@ -2,16 +2,35 @@ const text = document.querySelector("#textBox");
 const zButton = document.querySelector("#zButton");
 const pomoButton = document.querySelector("#pomoButton");
 const studyButton = document.querySelector("#studyButton");
+const langButton = document.querySelector("#langButton");
+const wikiButton = document.querySelector("#wikiButton");
 
 const ZoomBox = document.querySelector(".ZoomBox");
 const pomoBox = document.querySelector(".pomoBox");
 const studyBox = document.querySelector(".studyBox");
+const langBox = document.querySelector(".langBox");
+const wikiBox = document.querySelector(".wikiBox");
+
+
+
+function setDisplayNone(targetBox){
+    const boxes = [ZoomBox, pomoBox, studyBox, langBox, wikiBox];
+    i = 0;
+    while(i < boxes.length){
+        boxes[i].style="display:none";
+        i++;
+    }
+
+    
+}
 
 zButton.addEventListener("click", (e) => {
     e.preventDefault();
     text.style="display:none";
     pomoBox.style="display:none";
     studyBox.style="display:none";
+    wikiBox.style="display:none";
+    langBox.style="display:none";
     ZoomBox.style="";
 });
 
@@ -20,6 +39,8 @@ pomoButton.addEventListener("click", (e) => {
     text.style="display:none";
     ZoomBox.style="display:none";
     studyBox.style="display:none";
+    wikiBox.style="display:none";
+    langBox.style="display:none";
     pomoBox.style="";
 });
 
@@ -28,16 +49,37 @@ studyButton.addEventListener("click", (e) => {
     text.style="display:none";
     pomoBox.style="display:none";
     ZoomBox.style="display:none";
+    wikiBox.style="display:none";
+    langBox.style="display:none";
     studyBox.style="";
 });
 
+langButton.addEventListener("click", (e)=>{
+    e.preventDefault();
+    text.style="display:none";
+    pomoBox.style="display:none";
+    ZoomBox.style="display:none";
+    wikiBox.style="display:none";
+    studyBox.style="display:none";
+    langBox.style="";
+});
+
+wikiButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    text.style="display:none";
+    pomoBox.style="display:none";
+    ZoomBox.style="display:none";
+    studyBox.style="display:none";
+    langBox.style="display:none";
+    wikiBox.style="";
+});
 
 const pomoStartButton = document.querySelector("#startButton");
 const pomoResetButton = document.querySelector("#resetButton");
 const timeBox = document.querySelector("#timeBox");
 const cycleBox = document.querySelector("#cycleBox");
 
-let mins = 25; 
+let mins = 25; //25
 let i = 0;
 function countdown(){
     if(i % 2 != 0){
@@ -67,19 +109,18 @@ function countdown(){
 
         if((seconds <= 0) && (minutes <= 0)){
             i++;
-            console.log(i);
             if(i == 7){
                 clearInterval(myVar);
             } else if(i == 6){
-                min = 30;
+                min = 30; //30
                 clearInterval(myVar);
                 countdown();
             } else if(i % 2 != 0){
-                min = 5; 
+                min = 5; //5
                 clearInterval(myVar);
                 countdown();
             } else {
-                min = 25; 
+                min = 25; //25
                 clearInterval(myVar);
                 countdown();
             }

@@ -64,12 +64,7 @@ button{
 }
 
 
-.ZoomBox{
-    margin-top: 1em;
-    margin-bottom: 2em;
-}
-
-.langBox{
+.ZoomBox, .wikiBox, .langBox{
     margin-top: 1em;
     margin-bottom: 2em;
 }
@@ -80,11 +75,18 @@ button{
 
 .langBox textarea{
     float: right;
-    width: 50%;
+    width: 55%;
     margin-top: 50px;
     margin-right: 40px;
 }
 
+.wikiBox textarea{
+    float: right;
+    width: 60%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 40px;
+}
 
 .pomoBox button{
     border-radius: 15px;
@@ -109,4 +111,9 @@ button{
 
 .pomoBox h2{
    text-align: center; 
+}
+
+.studyBox{
+    margin-top: 15px;
+    margin-left: 5px;
 }

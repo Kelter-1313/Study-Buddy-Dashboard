@@ -51,10 +51,10 @@
 
 <body>
     
-    <div class="buttons">
-        <button class="button" id="zButton">Zoom Link Sharing</button>
+    <!-- <div class="buttons">
+        <button class="button" id="zButton">Zoom Link Sharing</button> -->
         
-        <form action="/external/" method="post">
+        <!-- <form action="/external/" method="post">
             {% csrf_token %}
             Enter Zoom Link:
             <input type="text" name="param" required><br><br>
@@ -63,22 +63,29 @@
 
             Enter Emails:
             <input type="text" name="param2" required><br><br>
-            <!-- {{data_external}}<br><br>
-            {{data1}} -->
+            {{data_external}}<br><br>
+            {{data1}}
             <br><br>
             <input type="submit" value="Send Zoom Link!!!">
 
-        </form>
+        </form> -->
+        <!-- <button class="button" id="pomoButton">Pomodoro Timer</button>
+        <button class="button" id="studyButton">Study Tips</button>
+    </div> -->
+
+    <div class="buttons">
+        <button class="button" id="zButton">Zoom Link Sharing</button>
         <button class="button" id="pomoButton">Pomodoro Timer</button>
         <button class="button" id="studyButton">Study Tips</button>
+        <button class="button" id="langButton">Quick Translate</button>
+        <button class="button" id="wikiButton">WikiSpeedia</button>
     </div>
-
 
     <div class="container">
         <p id="textBox">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum fugit sint earum ad enim? Nulla facere optio repellendus ratione quam adipisci. Pariatur mollitia dolorum minima itaque ducimus, aliquam fugiat veritatis atque, recusandae dignissimos quos nostrum quae nobis illum molestias consequuntur modi facere commodi non cupiditate qui odit perferendis numquam illo? Esse eius quibusdam, distinctio ad sunt similique numquam rem quia voluptas deserunt velit cupiditate placeat, necessitatibus vitae dolores, eum reiciendis aut adipisci. Dolor delectus quidem facere illo iusto totam quo, ab, placeat numquam incidunt libero iure nemo commodi a est perferendis id nam optio. Error enim provident quidem vero consequatur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam hic debitis, excepturi repellat sunt quibusdam nobis dignissimos repellendus repudiandae nostrum laboriosam? Sunt reiciendis maiores accusamus reprehenderit iure ipsam, nemo, eius sit odio maxime consequatur provident, aperiam earum id? Asperiores, voluptatibus. Ad, dolores voluptate adipisci animi labore laboriosam excepturi iure molestiae aliquam odio. Nesciunt deleniti provident blanditiis quibusdam aliquam reprehenderit similique, impedit repellat eaque harum, dicta sint? Impedit quibusdam voluptas eaque unde vel architecto omnis ipsa illo! Neque quisquam praesentium optio accusamus labore dolore odio recusandae non consequatur perspiciatis beatae sunt hic, eos saepe ipsa voluptatem amet asperiores maiores ipsam? Incidunt adipisci hic, fuga nisi necessitatibus nesciunt quae deserunt pariatur aspernatur, mollitia, nihil molestiae. Excepturi, qui. Labore corrupti itaque veniam quisquam quo beatae quos quidem quae voluptatem ut, provident rerum rem sed cupiditate voluptatibus, quia minus vitae aliquid officia. Sapiente dolorum nobis quis magni, reiciendis, pariatur doloribus ad sunt doloremque amet voluptates asperiores quam. Hic nostrum molestiae, officia eaque reiciendis blanditiis est laudantium nemo eligendi facere iusto accusantium deserunt ex aliquid consectetur saepe dicta tempore recusandae suscipit pariatur amet. Est accusamus, id</p> <!-- Feel free to put anything in here, first thing a user sees when visiting the page -->
         <!-- style:"" removed... -->
         <div class="ZoomBox" style="display:none">
-            <label for="">Please Input Your Zoom Link</label>
+            <!-- <label for="">Please Input Your Zoom Link</label>
             <br>
             <input type="text">
 
@@ -90,7 +97,21 @@
 
             <br>
 
-            <button class="zButton">Send Zoom Link</button>
+            <button class="zButton">Send Zoom Link</button> -->
+            <form action="/external/" method="post">
+                {% csrf_token %}
+                Enter Zoom Link:
+                <input type="text" name="param" required><br>
+                {{data_external}}
+                {{data1}}
+    
+                Enter Emails:
+                <input type="text" name="param2" required><br><br>
+                <!-- {{data_external}}<br><br>
+                {{data1}} -->
+                <input type="submit" value="Send Zoom Link!!!">
+    
+            </form>
         </div>
 
         <div class="pomoBox" style="display:none">
@@ -101,7 +122,50 @@
         </div>
 
         <div class="studyBox" style="display:none">
-            Text2
+            <button class="tipButton" id="tipButton">Generate Random Studytip</button>
+            <p id="tipBox"></p>
+            
+        </div>
+
+        <div class="langBox" style="display:none">
+
+            <textarea id="translatedBox" cols="30" rows="10"></textarea>
+
+            <br>
+
+            <label for="">Please Input Text to be Translated</label>
+            <br>
+            <input type="text">
+
+            <br>
+
+            <label for="">Please Input Current Language</label>
+            <br>
+            <input type="text">
+
+            <br>
+
+            <label for="">Please Input Target Language</label>
+            <br>
+            <input type="text">
+
+            <br>
+
+            <button class="zButton">Translate</button>
+
+            <br>
+
+            
+        </div>
+
+        <div class="wikiBox" style="display:none">
+            <textarea id="translatedBox" cols="30" rows="10"></textarea>
+
+            <br>
+
+            <label for="">Topic to Search</label>
+            <br>
+            <input type="text">
         </div>
 
     </div>

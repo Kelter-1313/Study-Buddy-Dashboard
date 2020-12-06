@@ -82,7 +82,13 @@
     </div>
 
     <div class="container">
-        <p id="textBox">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum fugit sint earum ad enim? Nulla facere optio repellendus ratione quam adipisci. Pariatur mollitia dolorum minima itaque ducimus, aliquam fugiat veritatis atque, recusandae dignissimos quos nostrum quae nobis illum molestias consequuntur modi facere commodi non cupiditate qui odit perferendis numquam illo? Esse eius quibusdam, distinctio ad sunt similique numquam rem quia voluptas deserunt velit cupiditate placeat, necessitatibus vitae dolores, eum reiciendis aut adipisci. Dolor delectus quidem facere illo iusto totam quo, ab, placeat numquam incidunt libero iure nemo commodi a est perferendis id nam optio. Error enim provident quidem vero consequatur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam hic debitis, excepturi repellat sunt quibusdam nobis dignissimos repellendus repudiandae nostrum laboriosam? Sunt reiciendis maiores accusamus reprehenderit iure ipsam, nemo, eius sit odio maxime consequatur provident, aperiam earum id? Asperiores, voluptatibus. Ad, dolores voluptate adipisci animi labore laboriosam excepturi iure molestiae aliquam odio. Nesciunt deleniti provident blanditiis quibusdam aliquam reprehenderit similique, impedit repellat eaque harum, dicta sint? Impedit quibusdam voluptas eaque unde vel architecto omnis ipsa illo! Neque quisquam praesentium optio accusamus labore dolore odio recusandae non consequatur perspiciatis beatae sunt hic, eos saepe ipsa voluptatem amet asperiores maiores ipsam? Incidunt adipisci hic, fuga nisi necessitatibus nesciunt quae deserunt pariatur aspernatur, mollitia, nihil molestiae. Excepturi, qui. Labore corrupti itaque veniam quisquam quo beatae quos quidem quae voluptatem ut, provident rerum rem sed cupiditate voluptatibus, quia minus vitae aliquid officia. Sapiente dolorum nobis quis magni, reiciendis, pariatur doloribus ad sunt doloremque amet voluptates asperiores quam. Hic nostrum molestiae, officia eaque reiciendis blanditiis est laudantium nemo eligendi facere iusto accusantium deserunt ex aliquid consectetur saepe dicta tempore recusandae suscipit pariatur amet. Est accusamus, id</p> <!-- Feel free to put anything in here, first thing a user sees when visiting the page -->
+        <p id="textBox">
+            Zoom Link Sharing is a tool that allows users to send a Zoom link to their study partners' emails all from one place. <br><br>
+            The Pomodoro Timer provides users with a time management tool that encourages them to work through large projects in an efficient method. The Pomodoro Method consists of 4 25-minute work intervals seperated by five minute breaks. <br><br>
+            The Study Tips tool provides users with randomized tips that may help them with everyday school activities. <br><br>
+            Quick Translate is a tool that allows users to input foreign text (in Chinese, Spanish, Portuguese, and English), the language that text is in, and the language they want to translate that text to, all while never having to leave the page. <br><br>
+            WikiSpeedia provides users with the ability to input a topic they would like to learn more about, and displays a short summary of that topic from Wikipeedia.
+        </p> <!-- Feel free to put anything in here, first thing a user sees when visiting the page -->
         <!-- style:"" removed... -->
         <div class="ZoomBox" style="display:none">
             <!-- <label for="">Please Input Your Zoom Link</label>
@@ -122,8 +128,22 @@
         </div>
 
         <div class="studyBox" style="display:none">
-            <button class="tipButton" id="tipButton">Generate Random Studytip</button>
-            <p id="tipBox"></p>
+            <!-- <button class="tipButton" id="tipButton">Generate Random Studytip</button> -->
+
+            <form action="/tips/" method="post">
+                {% csrf_token %}
+                <!-- Enter Zoom Link:
+                <input type="text" name="param3" required><br> -->
+                {{data_tips}}
+                {{data2}}
+    
+                <!-- Enter Emails:
+                <input type="text" name="param4" required><br><br> -->
+                <!-- {{data_external}}<br><br>
+                {{data1}} -->
+                <input type="submit" value="Send Tips!!!">
+    
+            </form>
             
         </div>
 
@@ -188,3 +208,4 @@
 </body>
 
 </html>
+

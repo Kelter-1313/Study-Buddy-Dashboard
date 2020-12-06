@@ -10,17 +10,17 @@ def tip_notifier() -> None:
     toast = ToastNotifier()
     toast.show_toast("Study tip!", tip, duration=20,icon_path="icon.ico")
 
-def email_sender() -> None:
-    """Sends a zoom link."""
-    import yagmail
-    receiver = "kelter1313@gmail.com", "demarcoal72@gmail.com"
-    body = "" # Zoom link will go here, inputted by the user
-    yag = yagmail.SMTP("studyquarantips@gmail.com", "#hackDuke2020CEN")
-    yag.send(
-        to=receiver,
-        subject="Zoom link for study group!",
-        contents=body, 
-    )
+# def email_sender() -> None:
+#    """Sends a zoom link."""
+#    import yagmail
+#    receiver = "kelter1313@gmail.com", "demarcoal72@gmail.com"
+#     body = "" # Zoom link will go here, inputted by the user
+#     yag = yagmail.SMTP("studyquarantips@gmail.com", "#hackDuke2020CEN")
+#     yag.send(
+#        to=receiver,
+#        subject="Zoom link for study group!",
+#        contents=body, 
+#     )
 
 def pomodoro_timer() -> None:
     """Initiates a pomodoro method timer."""
@@ -30,6 +30,8 @@ def pomodoro_timer() -> None:
     toast.show_toast("Pomodoro Method!", "Starting a 25 minute pomodoro timer! You'll be sent another notification when the timer is up!", duration=20,icon_path="icon.ico")
     sleep(1500.0)
     toast.show_toast("Pomodoro Method!", "Your 25 minutes are up! Record what you got done and take a five minute break!", duration=20, icon_path="icon.ico")
+
+
 
 def email_sender_with_input() -> None:
     """Sends a zoom link."""
@@ -44,3 +46,35 @@ def email_sender_with_input() -> None:
             subject="Zoom link for study group!",
             contents=body, 
         )
+
+def translation_interactive() -> None:                 #### VERY IMPORTANT : USES PRINT AT END... MUST OUTPUT TEXT TO WEBSITE IF IT IS TO BE USED INSTEAD ####
+    """Translation function. Accepts a text, an input language, and an output language from English, Portuguese, Spanish, and Chinese."""
+    from translate import Translator
+    text: str = input()
+    input_language: str = input()
+    output_language: str = input()
+    if output_language == "english" or output_language == "English":
+        output_language = "en"
+    elif output_language == "Spanish" or output_language == "spanish":
+        output_language = "es"
+    elif output_language == "portuguese" or output_language == "Portuguese":
+        output_language = "pt"
+    elif output_language == "chinese" or output_language == "Chinese" or output_language == "Mandarin" or output_language == "mandarin":
+        output_language = "zh"
+    else:
+        if output_language != "en" and output_language != "es" and output_language != "pt" and output_language != "zh":
+            print("Invalid language : Our choices are English, Spanish, Portuguese, and Chinese.")
+    if input_language == "english" or input_language == "English":
+        input_language = "en"
+    elif input_language == "Spanish" or input_language == "spanish":
+        input_language = "es"
+    elif input_language == "portuguese" or input_language == "Portuguese":
+        input_language = "pt"
+    elif input_language == "chinese" or input_language == "Chinese" or input_language == "Mandarin" or input_language == "mandarin":
+        input_language = "zh"
+    else:
+        if input_language != "en" and input_language != "es" and input_language != "pt" and input_language != "zh":
+            print("Invalid language : Our choices are English, Spanish, Portuguese, and Chinese.")
+    translator= Translator(from_lang = input_language, to_lang = output_language)
+    translation = translator.translate(text)
+    print(translation)

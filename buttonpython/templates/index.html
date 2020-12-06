@@ -1,52 +1,11 @@
-<!-- This is the html for the webpage
-
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title>StudyBuddy</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-
-<body>
-    
-    <div class="buttons">
-        <button>Zoom Link Sharing</button>
-        <button>PomodoroTimer</button>
-        <button>Study Tips</button>
-    </div>
-
-
-    <div class="container">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum fugit sint earum ad enim? Nulla facere optio repellendus ratione quam adipisci. Pariatur mollitia dolorum minima itaque ducimus, aliquam fugiat veritatis atque, recusandae dignissimos quos nostrum quae nobis illum molestias consequuntur modi facere commodi non cupiditate qui odit perferendis numquam illo? Esse eius quibusdam, distinctio ad sunt similique numquam rem quia voluptas deserunt velit cupiditate placeat, necessitatibus vitae dolores, eum reiciendis aut adipisci. Dolor delectus quidem</p>
-
-    </div>
-
-    <div class="sidebar">
-        <p>
-            <h3>Contributors:</h3>
-            <p></p>
-        </p>
-    </div>
-
-    
-</body>
-
-</html> -->
-
-
-<!--This is the html for the webpage-->
 {% load static %}
 
-
 <!DOCTYPE html>
 <html>
 
 <head>
-    <title>StudyBuddy</title>
+    <title>Study_Quarantools</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-    <!-- Old href : {% static 'css/style.css' %}--> 
-    <!-- C:\Users\kelter\Documents\GitHub\Study-Buddy-Dashboard\buttonpython\buttonpython\static\css\style.css -->
 </head>
 
 <body>
@@ -60,14 +19,15 @@
     </div>
 
     <div class="container">
+
         <p id="textBox">
             Zoom Link Sharing is a tool that allows users to send a Zoom link to their study partners' emails all from one place. <br><br>
             The Pomodoro Timer provides users with a time management tool that encourages them to work through large projects in an efficient method. The Pomodoro Method consists of 4 25-minute work intervals seperated by five minute breaks. <br><br>
             The Study Tips tool provides users with randomized tips that may help them with everyday school activities. NOTE : Only works on windows computers at the moment. <br><br>
             Quick Translate is a tool that allows users to input foreign text (in Chinese, Spanish, Portuguese, and English), the language that text is in, and the language they want to translate that text to, all while never having to leave the page. <br><br>
             WikiSpeedia provides users with the ability to input a topic they would like to learn more about, and displays a short summary of that topic from Wikipedia.
-        </p> <!-- Feel free to put anything in here, first thing a user sees when visiting the page -->
-        <!-- style:"" removed... -->
+        </p> 
+
         <div class="ZoomBox" style="display:none">
             <form action="/external/" method="post">
                 {% csrf_token %}
@@ -78,10 +38,8 @@
     
                 Enter Emails:
                 <input type="text" name="param2" required><br><br>
-                <!-- {{data_external}}<br><br>
-                {{data1}} -->
+
                 <input type="submit" value="Send Zoom Link!!!">
-    
             </form>
         </div>
 
@@ -93,27 +51,18 @@
         </div>
 
         <div class="studyBox" style="display:none">
-            <!-- <button class="tipButton" id="tipButton">Generate Random Studytip</button> -->
-
             <form action="/tips/" method="post">
                 {% csrf_token %}
-                <!-- Enter Zoom Link:
-                <input type="text" name="param3" required><br> -->
+
                 {{data_tips}}
                 {{data2}}
     
-                <!-- Enter Emails:
-                <input type="text" name="param4" required><br><br> -->
-                <!-- {{data_external}}<br><br>
-                {{data1}} -->
                 <input type="submit" value="Send Tips!!!">
-    
             </form>
             
         </div>
 
         <div class="langBox" style="display:none">
-
             <form action="/translator/" method="post">
                 {% csrf_token %}
                 Enter Text to be Translated:
@@ -128,9 +77,7 @@
                 {{data_translator}}
                 {{data3}}
                 <input type="submit" value="Translate!!!">
-    
             </form>
-            
         </div>
 
         <div class="wikiBox" style="display:none">
@@ -142,21 +89,8 @@
                 {{data_wikispeed}}
                 {{data4}}
                 <input type="submit" value="Send Query!!!">
-    
             </form>
         </div>
-
-        <!-- <div class="wikiBox" style="display:none">
-
-            <label for="">Topic to Search</label>
-            <br>
-            <input type="text" id="wikiTextBox">
-
-            <button id="wikiSearchButton">Search</button>
-        </div> -->
-
-
-
 
     </div>
 
@@ -167,18 +101,12 @@
         </p>
     </div>
 
-    <!-- <div id="UNC_img">
-        <img src="CS_UNC_blue.png" alt="">
-    </div> -->
-
-
+    <div id="UNC_img">
+        <img src="{% static 'img/CS_UNC_blue.png' %}" alt="">
+    </div>
 
     <script src= "{% static 'js/main.js' %}"></script>
-<!--Replaced {{STATIC_URL}}js/main.js-->
 
-    <!--{% load static %}
-<img src="{% static 'my_app/example.jpg' %}" alt="My image">-->
-    <!--Old src: "{{ STATIC_URL }}js/main.js"-->
 </body>
 
 </html>

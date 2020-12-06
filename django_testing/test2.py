@@ -3,7 +3,7 @@ import sys
 def main() -> None:
     """Entrypoint to program"""
     tip_notifier()
-    print("doneeee!!")
+    print("check your notifications!")
 
 
 def tip_notifier() -> None:

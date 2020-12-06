@@ -14,7 +14,9 @@ def output(request):
 
 def external(request):
     inp= request.POST.get('param')
-    out= run([sys.executable,'//vscode//django_testing//test.py',inp],shell=False,stdout=PIPE)
+    out= run([sys.executable,'//GitHub//Study-Buddy-Dashboard//django_testing//test.py',inp],shell=False,stdout=PIPE)
     print(out)
 
     return render(request,'home2.html',{'data1':out})
+
+

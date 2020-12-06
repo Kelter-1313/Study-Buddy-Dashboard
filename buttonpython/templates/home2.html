@@ -15,12 +15,17 @@
 
         <form action="/external/" method="post">
             {% csrf_token %}
-            Input Text:
+            Enter Zoom Link:
             <input type="text" name="param" required><br><br>
             {{data_external}}<br><br>
             {{data1}}
+
+            Enter Emails:
+            <input type="text" name="param2" required><br><br>
+            <!-- {{data_external}}<br><br>
+            {{data1}} -->
             <br><br>
-            <input type="submit" value="Execute External Python Script">
+            <input type="submit" value="Send Zoom Link!!!">
 
         </form>
 
